@@ -9,6 +9,8 @@
 #import "LoadingViewController.h"
 #import "AsyncURLConnection.h"
 #import "NSString+Utils.h"
+#import "SBJsonParser.h"
+#import "Photo.h"
 @implementation LoadingViewController
 @synthesize loadingLabel;
 @synthesize progressBar;
@@ -34,8 +36,28 @@
 
 - (void)parseResult:(NSData *)data
 {
-	
+	SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+	NSDictionary *result = [jsonParser objectWithData:data];
 
+	NSArray *photos  = [result objectForKey:@"data"];
+	NSMutableArray *parsedPhotos = [[NSMutableArray alloc] initWithCapacity:[photos count]];
+
+	NSInteger count =0;
+	for(NSDictionary *aPhotoDict in photos)
+	{
+		Photo *aPhoto = [[Photo alloc] init];
+		aPhoto.photoID = [aPhotoDict objectForKey:@"pid"];
+		aPhoto.bigPhotoURL = [aPhotoDict objectForKey:@"src_big"];
+		[parsedPhotos addObject:aPhoto];
+		[aPhoto release];
+	}
+
+	NSArray* documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentRootPath = [documentPaths objectAtIndex:0];
+	[NSKeyedArchiver archiveRootObject:parsedPhotos toFile:documentRootPath];
+	
+	NSLog(@"Number of empty photo: %d", count);
+	NSLog(@"Done");
 }
 
 - (void)viewDidLoad
@@ -43,7 +65,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	NSString *requestURL = [NSString stringByEscapingString:@"https://graph.facebook.com/fql?q=select caption, src_big from photo where aid ='108425012571651_29383'"];
-	NSString *queryString = @"https://graph.facebook.com/fql?q=select caption, src_big from photo where aid =\"108425012571651_29383\"";
+	NSString *queryString = @"https://graph.facebook.com/fql?q=select pid, src_big from photo where aid =\"108425012571651_29383\"";
 
 	[AsyncURLConnection request:[queryString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] completeBlock:^void(NSData *data) {
 		NSLog(@"Finished loading.");

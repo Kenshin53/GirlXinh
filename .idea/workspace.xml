@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e783058a-aa9d-4fb9-a1c9-4ce4520b66ba" name="Default" comment="" />
+    <list default="true" id="e783058a-aa9d-4fb9-a1c9-4ce4520b66ba" name="Default" comment="Parse photo objects.&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Data/Photo.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Data/Photo.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GirlXinhVN.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/GirlXinhVN.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.m" afterPath="$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.m" />
+    </list>
     <ignored path="GirlXinhVN.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,37 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppDelegate.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GirlXinhVN/AppDelegate.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Info.plist" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Caches/appCode10/DerivedData/GirlXinhVN-8170c837/Build/Products/Debug-iphonesimulator/GirlXinhVN.app/Info.plist">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="988" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GirlXinhVN/AppDelegate.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AsyncURLConnection.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/AsyncURLConnection.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="52" selection-start="390" selection-end="400" vertical-scroll-proportion="0.0">
+            <state line="22" column="30" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,7 +42,7 @@
       <file leaf-file-name="LoadingViewController.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="34" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
+            <state line="17" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -104,10 +84,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadingViewController.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NSObject.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="13" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Photo.h" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/Data/Photo.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="0.6094808">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Photo.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/Data/Photo.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="1" selection-start="868" selection-end="868" vertical-scroll-proportion="0.89841986">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadingViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="843" selection-end="843" vertical-scroll-proportion="0.5011287">
+            <state line="58" column="38" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,6 +141,8 @@
         <option value="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/NSString+URLEncode.h" />
         <option value="$PROJECT_DIR$/GirlXinhVN/Libraries/NSString+URLEncode.m" />
         <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.h" />
+        <option value="$PROJECT_DIR$/GirlXinhVN/Data/Photo.h" />
+        <option value="$PROJECT_DIR$/GirlXinhVN/Data/Photo.m" />
         <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.m" />
       </list>
     </option>
@@ -151,39 +160,6 @@
           <State>
             <id />
           </State>
-          <State>
-            <id>Bitwise operation issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Code style issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Control flow issuesJavaScript</id>
-          </State>
-          <State>
-            <id>DOM issuesJavaScript</id>
-          </State>
-          <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
-          <State>
-            <id>JavaScript validity issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Potentially confusing code constructsJavaScript</id>
-          </State>
-          <State>
-            <id>Probable BugsJavaScript</id>
-          </State>
-          <State>
-            <id>Type checks</id>
-          </State>
-          <State>
-            <id>Unused code</id>
-          </State>
         </expanded-state>
         <selected-state>
           <State>
@@ -193,7 +169,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -294,6 +270,24 @@
               <option name="myItemId" value="GirlXinhVN" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GirlXinhVN" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GirlXinhVN" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -302,7 +296,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Objective-C" />
+    <property name="options.lastSelected" value="editing.templates" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
@@ -365,7 +359,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494465" sideWeight="0.670922" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5702128" sideWeight="0.0" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32907802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -458,27 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/AsyncURLConnection.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="52" selection-start="390" selection-end="400" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/NSString+Utils.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/JSON/SBJson.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -493,9 +466,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/NSString+Utils.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/AsyncURLConnection.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="30" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="13" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="843" selection-end="843" vertical-scroll-proportion="0.5011287">
+        <state line="58" column="38" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Data/Photo.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="1" selection-start="868" selection-end="868" vertical-scroll-proportion="0.89841986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Data/Photo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="0.6094808">
           <folding />
         </state>
       </provider>

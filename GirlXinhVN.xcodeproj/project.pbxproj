@@ -36,6 +36,7 @@
 		10A011C4860B38457134DC8 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DC7 /* SBJsonTokeniser.m */; };
 		10A011C4860B38457134DCB /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DCA /* SBJsonUTF8Stream.m */; };
 		10A011C4860B38457134DCE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DCD /* SBJsonWriter.m */; };
+		10A011C4860B38457134DD0 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DCF /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,8 @@
 		10A011C4860B38457134DCA /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		10A011C4860B38457134DCC /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		10A011C4860B38457134DCD /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		10A011C4860B38457134DCF /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		10A011C4860B38457134DD1 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 		10A011C4860B38457134D7E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				10A011C4860B38457134DD1 /* Photo.h */,
+				10A011C4860B38457134DCF /* Photo.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				10A011C4860B38457134DC8 /* SBJsonTokeniser.m in Sources */,
 				10A011C4860B38457134DCB /* SBJsonUTF8Stream.m in Sources */,
 				10A011C4860B38457134DCE /* SBJsonWriter.m in Sources */,
+				10A011C4860B38457134DD0 /* Photo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
