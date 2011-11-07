@@ -11,9 +11,14 @@
 #import "NSString+Utils.h"
 #import "SBJsonParser.h"
 #import "Photo.h"
+#import "EGOImageLoader.h"
+
+#define kJSONDataProgress 0.1
+
 @implementation LoadingViewController
 @synthesize loadingLabel;
 @synthesize progressBar;
+@synthesize coverImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,7 +60,19 @@
 	NSArray* documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString* documentRootPath = [documentPaths objectAtIndex:0];
 	[NSKeyedArchiver archiveRootObject:parsedPhotos toFile:documentRootPath];
-	
+
+	delta = (1 - kJSONDataProgress) / [parsedPhotos count];
+
+		for (Photo *aPhoto in parsedPhotos)
+	{
+		[[EGOImageLoader sharedImageLoader] loadImageForURL:[NSURL URLWithString:aPhoto.bigPhotoURL] completion:^void(UIImage *image, NSURL *imageURL, NSError *error) {
+			progressBar.progress += delta;
+			coverImage.image = image;
+		}];
+
+
+	}
+
 	NSLog(@"Number of empty photo: %d", count);
 	NSLog(@"Done");
 }
@@ -69,17 +86,20 @@
 
 	[AsyncURLConnection request:[queryString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] completeBlock:^void(NSData *data) {
 		NSLog(@"Finished loading.");
-		progressBar.progress = 0.2;
+		progressBar.progress = kJSONDataProgress;
 		[self parseResult:data];
 	} errorBlock:^void(NSError *error) {
 		NSLog(@"Error: %@", [error description]);
 	}];
+
+
 }
 
 - (void)viewDidUnload
 {
     [self setLoadingLabel:nil];
     [self setProgressBar:nil];
+    [self setCoverImage:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -94,6 +114,10 @@
 - (void)dealloc {
     [loadingLabel release];
     [progressBar release];
+    [coverImage release];
     [super dealloc];
 }
+
+
+
 @end

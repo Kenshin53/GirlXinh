@@ -8,10 +8,16 @@
 
 
 
-@interface LoadingViewController : UIViewController
+#import "EGOImageLoader.h"
 
+@interface LoadingViewController : UIViewController <EGOImageLoaderObserver>
+{
+	float delta;
+
+}
 @property (retain, nonatomic) IBOutlet UILabel *loadingLabel;
 @property (retain, nonatomic) IBOutlet UIProgressView *progressBar;
+@property (retain, nonatomic) IBOutlet UIImageView *coverImage;
 
 - (void)parseResult:(NSData *)data;
 @end

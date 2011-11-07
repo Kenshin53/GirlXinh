@@ -37,6 +37,10 @@
 		10A011C4860B38457134DCB /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DCA /* SBJsonUTF8Stream.m */; };
 		10A011C4860B38457134DCE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DCD /* SBJsonWriter.m */; };
 		10A011C4860B38457134DD0 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DCF /* Photo.m */; };
+		10A011C4860B38457134DD6 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DD5 /* EGOCache.m */; };
+		10A011C4860B38457134DDA /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DD9 /* EGOImageLoadConnection.m */; };
+		10A011C4860B38457134DDD /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DDC /* EGOImageLoader.m */; };
+		10A011C4860B38457134DE1 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DE0 /* EGOImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +104,15 @@
 		10A011C4860B38457134DCD /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		10A011C4860B38457134DCF /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		10A011C4860B38457134DD1 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		10A011C4860B38457134DD4 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		10A011C4860B38457134DD5 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		10A011C4860B38457134DD8 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
+		10A011C4860B38457134DD9 /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
+		10A011C4860B38457134DDB /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
+		10A011C4860B38457134DDC /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
+		10A011C4860B38457134DDF /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
+		10A011C4860B38457134DE0 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
+		10A011C4860B38457134DE2 /* AppDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +173,7 @@
 		10A011C4860B38457134D72 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10A011C4860B38457134DE2 /* AppDefines.h */,
 				10A011C4860B38457134D79 /* GirlXinhVN-Prefix.pch */,
 				10A011C4860B38457134D77 /* main.m */,
 				10A011C4860B38457134D75 /* InfoPlist.strings */,
@@ -203,6 +217,7 @@
 				10A011C4860B38457134D9A /* AsyncURLConnection.h */,
 				10A011C4860B38457134D81 /* DTGridView */,
 				10A011C4860B38457134DA8 /* JSON */,
+				10A011C4860B38457134DD2 /* EGOImageLoading */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -276,6 +291,45 @@
 				10A011C4860B38457134DA9 /* JSON.h */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		10A011C4860B38457134DD2 /* EGOImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				10A011C4860B38457134DD3 /* EGOCache */,
+				10A011C4860B38457134DD7 /* EGOImageLoader */,
+				10A011C4860B38457134DDE /* EGOImageView */,
+			);
+			path = EGOImageLoading;
+			sourceTree = "<group>";
+		};
+		10A011C4860B38457134DD3 /* EGOCache */ = {
+			isa = PBXGroup;
+			children = (
+				10A011C4860B38457134DD5 /* EGOCache.m */,
+				10A011C4860B38457134DD4 /* EGOCache.h */,
+			);
+			path = EGOCache;
+			sourceTree = "<group>";
+		};
+		10A011C4860B38457134DD7 /* EGOImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				10A011C4860B38457134DDC /* EGOImageLoader.m */,
+				10A011C4860B38457134DDB /* EGOImageLoader.h */,
+				10A011C4860B38457134DD9 /* EGOImageLoadConnection.m */,
+				10A011C4860B38457134DD8 /* EGOImageLoadConnection.h */,
+			);
+			path = EGOImageLoader;
+			sourceTree = "<group>";
+		};
+		10A011C4860B38457134DDE /* EGOImageView */ = {
+			isa = PBXGroup;
+			children = (
+				10A011C4860B38457134DE0 /* EGOImageView.m */,
+				10A011C4860B38457134DDF /* EGOImageView.h */,
+			);
+			path = EGOImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +419,10 @@
 				10A011C4860B38457134DCB /* SBJsonUTF8Stream.m in Sources */,
 				10A011C4860B38457134DCE /* SBJsonWriter.m in Sources */,
 				10A011C4860B38457134DD0 /* Photo.m in Sources */,
+				10A011C4860B38457134DD6 /* EGOCache.m in Sources */,
+				10A011C4860B38457134DDA /* EGOImageLoadConnection.m in Sources */,
+				10A011C4860B38457134DDD /* EGOImageLoader.m in Sources */,
+				10A011C4860B38457134DE1 /* EGOImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
