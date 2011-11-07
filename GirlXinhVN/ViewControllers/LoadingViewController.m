@@ -13,7 +13,7 @@
 #import "Photo.h"
 #import "EGOImageLoader.h"
 
-#define kJSONDataProgress 0.1
+#define kJSONDataProgress 0.0
 
 @implementation LoadingViewController
 @synthesize loadingLabel;
@@ -62,12 +62,27 @@
 	[NSKeyedArchiver archiveRootObject:parsedPhotos toFile:documentRootPath];
 
 	delta = (1 - kJSONDataProgress) / [parsedPhotos count];
+	
+	__block  int step = [parsedPhotos count]/20;
 
-		for (Photo *aPhoto in parsedPhotos)
+
+
+    __block int index = 0;
+    for (Photo *aPhoto in parsedPhotos)
 	{
 		[[EGOImageLoader sharedImageLoader] loadImageForURL:[NSURL URLWithString:aPhoto.bigPhotoURL] completion:^void(UIImage *image, NSURL *imageURL, NSError *error) {
-			progressBar.progress += delta;
-			coverImage.image = image;
+			if (index % 4 == 0)
+			{
+				UIImageView *imageView = (UIImageView *)[self.view viewWithTag:((index /4) % 9)+1];
+				imageView.image = image;
+			}
+			index++;
+
+			if (index % step == 0)
+			{
+				progressBar.progress += 0.05;
+			}
+			
 		}];
 
 
