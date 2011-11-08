@@ -38,6 +38,14 @@
 		10A011C4860B38457134DE7 /* PhotoGridViewControllers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DE6 /* PhotoGridViewControllers.xib */; };
 		10A011C4860B38457134DE9 /* PhotoGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DE8 /* PhotoGridCell.m */; };
 		FCDA417414689FD7000D4C27 /* PhotoGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA417314689FD7000D4C27 /* PhotoGridCell.xib */; };
+		FCDA417414689FD7000D4C2B /* DTGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C2A /* DTGridView.m */; };
+		FCDA417414689FD7000D4C2E /* DTGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C2D /* DTGridViewCell.m */; };
+		FCDA417414689FD7000D4C32 /* DTGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C31 /* DTGridViewController.m */; };
+		FCDA417414689FD7000D4C36 /* DTInfiniteGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C35 /* DTInfiniteGridView.m */; };
+		FCDA417414689FD7000D4C3A /* DTLabelsSnapGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C39 /* DTLabelsSnapGridViewCell.m */; };
+		FCDA417414689FD7000D4C3D /* DTSnapGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C3C /* DTSnapGridView.m */; };
+		FCDA417414689FD7000D4C40 /* DTSnapGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C3F /* DTSnapGridViewCell.m */; };
+		FCDA417414689FD7000D4C43 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C42 /* UIImage+Resize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +109,23 @@
 		10A011C4860B38457134DE8 /* PhotoGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGridCell.m; sourceTree = "<group>"; };
 		10A011C4860B38457134DEA /* PhotoGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGridCell.h; sourceTree = "<group>"; };
 		FCDA417314689FD7000D4C27 /* PhotoGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoGridCell.xib; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C29 /* DTGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridView.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C2A /* DTGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridView.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C2C /* DTGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewCell.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C2D /* DTGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridViewCell.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C2F /* DTGridViewCellInfoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewCellInfoProtocol.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C30 /* DTGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewController.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C31 /* DTGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridViewController.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C34 /* DTInfiniteGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInfiniteGridView.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C35 /* DTInfiniteGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInfiniteGridView.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C38 /* DTLabelsSnapGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTLabelsSnapGridViewCell.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C39 /* DTLabelsSnapGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTLabelsSnapGridViewCell.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C3B /* DTSnapGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSnapGridView.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C3C /* DTSnapGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSnapGridView.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C3E /* DTSnapGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSnapGridViewCell.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C3F /* DTSnapGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSnapGridViewCell.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C42 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C44 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +236,8 @@
 				10A011C4860B38457134D9A /* AsyncURLConnection.h */,
 				10A011C4860B38457134DA8 /* JSON */,
 				10A011C4860B38457134DD2 /* EGOImageLoading */,
+				FCDA417414689FD7000D4C28 /* DTGridView */,
+				FCDA417414689FD7000D4C41 /* Extension */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -285,6 +312,53 @@
 				10A011C4860B38457134DDF /* EGOImageView.h */,
 			);
 			path = EGOImageView;
+			sourceTree = "<group>";
+		};
+		FCDA417414689FD7000D4C28 /* DTGridView */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA417414689FD7000D4C31 /* DTGridViewController.m */,
+				FCDA417414689FD7000D4C30 /* DTGridViewController.h */,
+				FCDA417414689FD7000D4C2F /* DTGridViewCellInfoProtocol.h */,
+				FCDA417414689FD7000D4C2D /* DTGridViewCell.m */,
+				FCDA417414689FD7000D4C2C /* DTGridViewCell.h */,
+				FCDA417414689FD7000D4C2A /* DTGridView.m */,
+				FCDA417414689FD7000D4C29 /* DTGridView.h */,
+				FCDA417414689FD7000D4C33 /* DTInfiniteGridView */,
+				FCDA417414689FD7000D4C37 /* DTSnapGridView */,
+			);
+			path = DTGridView;
+			sourceTree = "<group>";
+		};
+		FCDA417414689FD7000D4C33 /* DTInfiniteGridView */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA417414689FD7000D4C35 /* DTInfiniteGridView.m */,
+				FCDA417414689FD7000D4C34 /* DTInfiniteGridView.h */,
+			);
+			path = DTInfiniteGridView;
+			sourceTree = "<group>";
+		};
+		FCDA417414689FD7000D4C37 /* DTSnapGridView */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA417414689FD7000D4C3F /* DTSnapGridViewCell.m */,
+				FCDA417414689FD7000D4C3E /* DTSnapGridViewCell.h */,
+				FCDA417414689FD7000D4C3C /* DTSnapGridView.m */,
+				FCDA417414689FD7000D4C3B /* DTSnapGridView.h */,
+				FCDA417414689FD7000D4C39 /* DTLabelsSnapGridViewCell.m */,
+				FCDA417414689FD7000D4C38 /* DTLabelsSnapGridViewCell.h */,
+			);
+			path = DTSnapGridView;
+			sourceTree = "<group>";
+		};
+		FCDA417414689FD7000D4C41 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA417414689FD7000D4C44 /* UIImage+Resize.h */,
+				FCDA417414689FD7000D4C42 /* UIImage+Resize.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +449,14 @@
 				10A011C4860B38457134DE1 /* EGOImageView.m in Sources */,
 				10A011C4860B38457134DE5 /* PhotoGridViewControllers.m in Sources */,
 				10A011C4860B38457134DE9 /* PhotoGridCell.m in Sources */,
+				FCDA417414689FD7000D4C2B /* DTGridView.m in Sources */,
+				FCDA417414689FD7000D4C2E /* DTGridViewCell.m in Sources */,
+				FCDA417414689FD7000D4C32 /* DTGridViewController.m in Sources */,
+				FCDA417414689FD7000D4C36 /* DTInfiniteGridView.m in Sources */,
+				FCDA417414689FD7000D4C3A /* DTLabelsSnapGridViewCell.m in Sources */,
+				FCDA417414689FD7000D4C3D /* DTSnapGridView.m in Sources */,
+				FCDA417414689FD7000D4C40 /* DTSnapGridViewCell.m in Sources */,
+				FCDA417414689FD7000D4C43 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

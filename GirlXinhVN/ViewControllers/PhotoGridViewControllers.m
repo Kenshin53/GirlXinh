@@ -102,6 +102,8 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 {
     self.photos = viewController.parsedPhotos;
     [self dismissModalViewControllerAnimated:YES];
+	[self.gridView reloadData];
+
 }
 
 
@@ -123,7 +125,7 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 // ***********************************************************************************
 - (NSInteger)numberOfRowsInGridView:(DTGridView *)gridView;
 {
-	return 5;
+	return 250;
 
 }
 
@@ -188,11 +190,11 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 	}
     
     NSURL *aURL = [NSURL URLWithString:[[photos objectAtIndex:rowIndex * 4 + columnIndex] bigPhotoURL]];
-    UIImage* anImage = [[EGOCache currentCache] imageForKey:keyForURL(aURL,nil)];
-    cell.imageView.image = anImage;
+    cell.imageView.image = [[EGOCache currentCache] imageForKey:keyForURL(aURL,@"thumbnail")];
+
 	return cell;
 
-
+	
 }
 
 @end

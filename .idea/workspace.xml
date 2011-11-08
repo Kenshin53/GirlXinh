@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e783058a-aa9d-4fb9-a1c9-4ce4520b66ba" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridView.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridView.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewCell.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewCell.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewCellInfoProtocol.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewController.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewController.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTInfiniteGridView/DTInfiniteGridView.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTInfiniteGridView/DTInfiniteGridView.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTLabelsSnapGridViewCell.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTLabelsSnapGridViewCell.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTSnapGridView.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTSnapGridView.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTSnapGridViewCell.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTSnapGridViewCell.m" afterPath="" />
+    <list id="e783058a-aa9d-4fb9-a1c9-4ce4520b66ba" name="Default" comment="" />
+    <list default="true" id="7ee92cae-aab1-4357-945d-c8982a29edb7" name="New changelist" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridView.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridView.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewCellInfoProtocol.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridViewController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTInfiniteGridView/DTInfiniteGridView.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTInfiniteGridView/DTInfiniteGridView.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTLabelsSnapGridViewCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTLabelsSnapGridViewCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTSnapGridView.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTSnapGridView.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTSnapGridViewCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTSnapGridView/DTSnapGridViewCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/Extension/UIImage+Resize.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/Extension/UIImage+Resize.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GirlXinhVN.xcodeproj/project.xcworkspace/xcuserdata/caomanhtuanbsb.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/GirlXinhVN.xcodeproj/project.xcworkspace/xcuserdata/caomanhtuanbsb.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GirlXinhVN.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/GirlXinhVN.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoader.m" afterPath="$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoader.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridCell.xib" afterPath="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridCell.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.m" afterPath="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.xib" afterPath="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.xib" />
     </list>
     <ignored path="GirlXinhVN.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +48,98 @@
     <favorites_list name="GirlXinhVN" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="PhotoGridViewControllers.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="16" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIImage+Resize.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/Extension/UIImage+Resize.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="4" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhotoGridViewControllers.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="178" column="102" selection-start="4812" selection-end="4812" vertical-scroll-proportion="-8.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EGOCache.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOCache/EGOCache.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="8" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EGOImageLoadConnection.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoadConnection.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="15" selection-start="1387" selection-end="1393" vertical-scroll-proportion="-2.2307692">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EGOImageLoader.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoader.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="0" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EGOImageLoader.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoader.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="197" column="15" selection-start="7076" selection-end="7076" vertical-scroll-proportion="0.7745098">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EGOImageLoadConnection.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoadConnection.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EGOCache.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOCache/EGOCache.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="159" column="8" selection-start="5235" selection-end="5235" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadingViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="43" selection-start="2604" selection-end="2604" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -57,9 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/GirlXinhVN/AppDelegate.m" />
-        <option value="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/NSString+URLEncode.m" />
-        <option value="$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/NSString+URLEncode.h" />
         <option value="$PROJECT_DIR$/GirlXinhVN/Libraries/NSString+URLEncode.m" />
         <option value="$PROJECT_DIR$/GirlXinhVN/Data/Photo.h" />
         <option value="$PROJECT_DIR$/GirlXinhVN/Data/Photo.m" />
@@ -68,11 +162,14 @@
         <option value="$PROJECT_DIR$/GirlXinhVN/AppDefines.h" />
         <option value="$PROJECT_DIR$/GirlXinhVN/GirlXinhVN-Prefix.pch" />
         <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.xib" />
-        <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.xib" />
         <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.m" />
-        <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.m" />
         <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridCell.h" />
         <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridCell.xib" />
+        <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.xib" />
+        <option value="$PROJECT_DIR$/GirlXinhVN/Libraries/Extension/UIImage+Resize.m" />
+        <option value="$PROJECT_DIR$/GirlXinhVN/Libraries/Extension/UIImage+Resize.h" />
+        <option value="$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoader.m" />
+        <option value="$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.m" />
       </list>
     </option>
   </component>
@@ -80,7 +177,7 @@
     <option name="x" value="5" />
     <option name="y" value="22" />
     <option name="width" value="1435" />
-    <option name="height" value="807" />
+    <option name="height" value="795" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -256,11 +353,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EGOImageLoading" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EGOImageView" />
+              <option name="myItemId" value="Extension" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,6 +376,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="EGOImageLoading" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GirlXinhVN" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GirlXinhVN" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Libraries" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EGOImageLoading" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EGOImageLoader" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,14 +449,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Objective-C" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.GirlXinhVN - Debug">
-    <configuration default="false" name="GirlXinhVN - Debug" type="AppleRunConfiguration" factoryName="Application" temporary="true" PROJECT_NAME="GirlXinhVN" TARGET_NAME="GirlXinhVN" CONFIG_NAME="Debug" SDK_NAME="iphonesimulator5.0" ARCH_ID="Standard" DEVICE="IPHONE" DEBUGGER="GDB" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="GirlXinhVN - Debug" type="AppleRunConfiguration" factoryName="Application" temporary="true" PROJECT_NAME="GirlXinhVN" TARGET_NAME="GirlXinhVN" CONFIG_NAME="Release" SDK_NAME="iphoneos5.0" ARCH_ID="PlatformStandard" DEVICE="IPHONE" DEBUGGER="GDB" REAL_DEVICE_SN="DNQGHGKGDTD7" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <RunnerSettings RunnerId="AppRunner" />
       <ConfigurationWrapper RunnerId="AppRunner" />
@@ -345,7 +464,7 @@
         <option name="com.jetbrains.cidr.execution.StopCurrentSessionBeforeRunTaskProvider$StopCurrentSessionBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="GirlXinhVN" TARGET_NAME="GirlXinhVN" CONFIG_NAME="Debug" SDK_NAME="iphonesimulator5.0" ARCH_ID="Standard" DEVICE="IPHONE" DEBUGGER="GDB" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="GirlXinhVN" TARGET_NAME="GirlXinhVN" CONFIG_NAME="Debug" SDK_NAME="iphoneos5.0" ARCH_ID="PlatformStandard" DEVICE="IPHONE" DEBUGGER="GDB" REAL_DEVICE_SN="DNQGHGKGDTD7" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <method>
         <option name="com.jetbrains.cidr.execution.BuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -378,9 +497,11 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e783058a-aa9d-4fb9-a1c9-4ce4520b66ba" name="Default" comment="" />
+      <changelist id="7ee92cae-aab1-4357-945d-c8982a29edb7" name="New changelist" comment="" />
       <created>1320615587170</created>
-      <updated>1320615587170</updated>
+      <updated>1320786716251</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -404,23 +525,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="22" width="1435" height="807" extended-state="0" />
-    <editor active="false" />
+    <frame x="5" y="22" width="1435" height="795" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293201" sideWeight="0.14950635" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293201" sideWeight="0.5105783" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.0" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21388102" sideWeight="0.14777619" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21388102" sideWeight="0.50645626" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33428982" sideWeight="0.0" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32863188" sideWeight="0.0" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.0" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -459,7 +580,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add loading effect." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove DTGridView" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -476,62 +597,15 @@
     <MESSAGE value="Add EGOImageLoading lib" />
     <MESSAGE value="Add EGOImageLoading lib&#10;Add load/cache image" />
     <MESSAGE value="Add loading effect." />
+    <MESSAGE value="Remove DTGridView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageView/EGOImageView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="33" selection-start="3157" selection-end="3157" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/AppDefines.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoader.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="4" selection-start="9751" selection-end="9751" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageView/EGOImageView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.xib">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="16" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="14" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="13" selection-start="1697" selection-end="1697" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="64" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.xib">
@@ -539,38 +613,100 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/GirlXinhVN-Prefix.pch">
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" />
+        <state line="115" column="42" selection-start="3293" selection-end="3293" vertical-scroll-proportion="-16.346153">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoader.h">
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridView.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="27" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.0" />
+        <state line="222" column="18" selection-start="8831" selection-end="8841" vertical-scroll-proportion="-5.769231">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
+        <state line="28" column="52" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridCell.h">
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/Extension/UIImage+Resize.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="4" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+        <state line="11" column="24" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridCell.xib">
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/Extension/UIImage+Resize.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="33" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.5947136" />
+        <state line="20" column="4" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/DTGridView/DTGridView.m">
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="273" column="0" selection-start="6961" selection-end="6961" vertical-scroll-proportion="0.8408072">
+        <state line="8" column="16" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/LoadingViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="43" selection-start="2604" selection-end="2604" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoadConnection.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoadConnection.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="15" selection-start="1387" selection-end="1393" vertical-scroll-proportion="-2.2307692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/ViewControllers/PhotoGridViewControllers.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="102" selection-start="4812" selection-end="4812" vertical-scroll-proportion="-8.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOCache/EGOCache.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="8" selection-start="5235" selection-end="5235" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOCache/EGOCache.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="8" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GirlXinhVN/Libraries/EGOImageLoading/EGOImageLoader/EGOImageLoader.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="197" column="15" selection-start="7076" selection-end="7076" vertical-scroll-proportion="0.7745098">
           <folding />
         </state>
       </provider>

@@ -27,7 +27,7 @@
 #import "EGOImageLoader.h"
 #import "EGOImageLoadConnection.h"
 #import "EGOCache.h"
-
+#import "UIImage+Resize.h"
 static EGOImageLoader* __imageLoader;
 
 inline static NSString* keyForURL(NSURL* url, NSString* style) {
@@ -236,7 +236,7 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 	
 	if(!anImage) {
 		NSError* error = [NSError errorWithDomain:[connection.imageURL host] code:406 userInfo:nil];
-		
+
 		#if __EGOIL_USE_NOTIF
 		NSNotification* notification = [NSNotification notificationWithName:kImageNotificationLoadFailed(connection.imageURL)
 																	 object:self
@@ -250,7 +250,14 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 		#endif
 	} else {
 		[[EGOCache currentCache] setData:connection.responseData forKey:keyForURL(connection.imageURL,nil) withTimeoutInterval:604800];
-		
+
+		CGSize fullSize = anImage.size;
+		CGFloat smallerDimension = MIN(fullSize.height, fullSize.width);
+		CGFloat scale = 80.0 / smallerDimension;
+		CGSize thumbnailSize = CGSizeMake (fullSize.width * scale, fullSize.height * scale);
+	    UIImage * thumbnailImage = [UIImage imageWithImage:anImage scaledToSize:thumbnailSize];
+		[[EGOCache currentCache] setData:UIImageJPEGRepresentation(thumbnailImage, 1.0) forKey:keyForURL(connection.imageURL,@"thumbnail") withTimeoutInterval:604800];
+
 		[currentConnections removeObjectForKey:connection.imageURL];
 		self.currentConnections = [[currentConnections copy] autorelease];
 		
