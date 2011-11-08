@@ -13,13 +13,6 @@
 		10A011C4860B38457134D76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D75 /* InfoPlist.strings */; };
 		10A011C4860B38457134D78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D77 /* main.m */; };
 		10A011C4860B38457134D7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D7B /* AppDelegate.m */; };
-		10A011C4860B38457134D84 /* DTGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D83 /* DTGridView.m */; };
-		10A011C4860B38457134D87 /* DTGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D86 /* DTGridViewCell.m */; };
-		10A011C4860B38457134D8B /* DTGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D8A /* DTGridViewController.m */; };
-		10A011C4860B38457134D8F /* DTInfiniteGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D8E /* DTInfiniteGridView.m */; };
-		10A011C4860B38457134D93 /* DTLabelsSnapGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D92 /* DTLabelsSnapGridViewCell.m */; };
-		10A011C4860B38457134D96 /* DTSnapGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D95 /* DTSnapGridView.m */; };
-		10A011C4860B38457134D99 /* DTSnapGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D98 /* DTSnapGridViewCell.m */; };
 		10A011C4860B38457134D9C /* AsyncURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D9B /* AsyncURLConnection.m */; };
 		10A011C4860B38457134D9F /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134D9E /* LoadingViewController.m */; };
 		10A011C4860B38457134DA1 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DA0 /* LoadingViewController.xib */; };
@@ -58,21 +51,6 @@
 		10A011C4860B38457134D79 /* GirlXinhVN-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GirlXinhVN-Prefix.pch"; sourceTree = "<group>"; };
 		10A011C4860B38457134D7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10A011C4860B38457134D7B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		10A011C4860B38457134D82 /* DTGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridView.h; sourceTree = "<group>"; };
-		10A011C4860B38457134D83 /* DTGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridView.m; sourceTree = "<group>"; };
-		10A011C4860B38457134D85 /* DTGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewCell.h; sourceTree = "<group>"; };
-		10A011C4860B38457134D86 /* DTGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridViewCell.m; sourceTree = "<group>"; };
-		10A011C4860B38457134D88 /* DTGridViewCellInfoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewCellInfoProtocol.h; sourceTree = "<group>"; };
-		10A011C4860B38457134D89 /* DTGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGridViewController.h; sourceTree = "<group>"; };
-		10A011C4860B38457134D8A /* DTGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGridViewController.m; sourceTree = "<group>"; };
-		10A011C4860B38457134D8D /* DTInfiniteGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTInfiniteGridView.h; sourceTree = "<group>"; };
-		10A011C4860B38457134D8E /* DTInfiniteGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTInfiniteGridView.m; sourceTree = "<group>"; };
-		10A011C4860B38457134D91 /* DTLabelsSnapGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTLabelsSnapGridViewCell.h; sourceTree = "<group>"; };
-		10A011C4860B38457134D92 /* DTLabelsSnapGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTLabelsSnapGridViewCell.m; sourceTree = "<group>"; };
-		10A011C4860B38457134D94 /* DTSnapGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSnapGridView.h; sourceTree = "<group>"; };
-		10A011C4860B38457134D95 /* DTSnapGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSnapGridView.m; sourceTree = "<group>"; };
-		10A011C4860B38457134D97 /* DTSnapGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSnapGridViewCell.h; sourceTree = "<group>"; };
-		10A011C4860B38457134D98 /* DTSnapGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSnapGridViewCell.m; sourceTree = "<group>"; };
 		10A011C4860B38457134D9A /* AsyncURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncURLConnection.h; sourceTree = "<group>"; };
 		10A011C4860B38457134D9B /* AsyncURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncURLConnection.m; sourceTree = "<group>"; };
 		10A011C4860B38457134D9D /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
@@ -231,49 +209,10 @@
 				10A011C4860B38457134DA5 /* NSString+Utils.h */,
 				10A011C4860B38457134D9B /* AsyncURLConnection.m */,
 				10A011C4860B38457134D9A /* AsyncURLConnection.h */,
-				10A011C4860B38457134D81 /* DTGridView */,
 				10A011C4860B38457134DA8 /* JSON */,
 				10A011C4860B38457134DD2 /* EGOImageLoading */,
 			);
 			path = Libraries;
-			sourceTree = "<group>";
-		};
-		10A011C4860B38457134D81 /* DTGridView */ = {
-			isa = PBXGroup;
-			children = (
-				10A011C4860B38457134D8A /* DTGridViewController.m */,
-				10A011C4860B38457134D89 /* DTGridViewController.h */,
-				10A011C4860B38457134D88 /* DTGridViewCellInfoProtocol.h */,
-				10A011C4860B38457134D86 /* DTGridViewCell.m */,
-				10A011C4860B38457134D85 /* DTGridViewCell.h */,
-				10A011C4860B38457134D83 /* DTGridView.m */,
-				10A011C4860B38457134D82 /* DTGridView.h */,
-				10A011C4860B38457134D8C /* DTInfiniteGridView */,
-				10A011C4860B38457134D90 /* DTSnapGridView */,
-			);
-			path = DTGridView;
-			sourceTree = "<group>";
-		};
-		10A011C4860B38457134D8C /* DTInfiniteGridView */ = {
-			isa = PBXGroup;
-			children = (
-				10A011C4860B38457134D8E /* DTInfiniteGridView.m */,
-				10A011C4860B38457134D8D /* DTInfiniteGridView.h */,
-			);
-			path = DTInfiniteGridView;
-			sourceTree = "<group>";
-		};
-		10A011C4860B38457134D90 /* DTSnapGridView */ = {
-			isa = PBXGroup;
-			children = (
-				10A011C4860B38457134D98 /* DTSnapGridViewCell.m */,
-				10A011C4860B38457134D97 /* DTSnapGridViewCell.h */,
-				10A011C4860B38457134D95 /* DTSnapGridView.m */,
-				10A011C4860B38457134D94 /* DTSnapGridView.h */,
-				10A011C4860B38457134D92 /* DTLabelsSnapGridViewCell.m */,
-				10A011C4860B38457134D91 /* DTLabelsSnapGridViewCell.h */,
-			);
-			path = DTSnapGridView;
 			sourceTree = "<group>";
 		};
 		10A011C4860B38457134DA8 /* JSON */ = {
@@ -414,13 +353,6 @@
 			files = (
 				10A011C4860B38457134D78 /* main.m in Sources */,
 				10A011C4860B38457134D7C /* AppDelegate.m in Sources */,
-				10A011C4860B38457134D84 /* DTGridView.m in Sources */,
-				10A011C4860B38457134D87 /* DTGridViewCell.m in Sources */,
-				10A011C4860B38457134D8B /* DTGridViewController.m in Sources */,
-				10A011C4860B38457134D8F /* DTInfiniteGridView.m in Sources */,
-				10A011C4860B38457134D93 /* DTLabelsSnapGridViewCell.m in Sources */,
-				10A011C4860B38457134D96 /* DTSnapGridView.m in Sources */,
-				10A011C4860B38457134D99 /* DTSnapGridViewCell.m in Sources */,
 				10A011C4860B38457134D9C /* AsyncURLConnection.m in Sources */,
 				10A011C4860B38457134D9F /* LoadingViewController.m in Sources */,
 				10A011C4860B38457134DA7 /* NSString+Utils.m in Sources */,
