@@ -19,6 +19,8 @@
 @synthesize loadingLabel;
 @synthesize progressBar;
 @synthesize coverImage;
+@synthesize delegate;
+@synthesize parsedPhotos;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,7 +47,7 @@
 	NSDictionary *result = [jsonParser objectWithData:data];
 
 	NSArray *photos  = [result objectForKey:@"data"];
-	NSMutableArray *parsedPhotos = [[NSMutableArray alloc] initWithCapacity:[photos count]];
+	parsedPhotos = [[NSMutableArray alloc] initWithCapacity:[photos count]];
 
 	NSInteger count =0;
 	for(NSDictionary *aPhotoDict in photos)
@@ -64,13 +66,13 @@
 	delta = (1 - kJSONDataProgress) / [parsedPhotos count];
 	
 	__block  int step = [parsedPhotos count]/20;
-
-
-
     __block int index = 0;
+
     for (Photo *aPhoto in parsedPhotos)
 	{
-		[[EGOImageLoader sharedImageLoader] loadImageForURL:[NSURL URLWithString:aPhoto.bigPhotoURL] completion:^void(UIImage *image, NSURL *imageURL, NSError *error) {
+		[[EGOImageLoader sharedImageLoader] loadImageForURL:[NSURL URLWithString:aPhoto.bigPhotoURL]
+		                                         completion:^void(UIImage *image, NSURL *imageURL, NSError *error)
+		{
 			if (index % 4 == 0)
 			{
 				UIImageView *imageView = (UIImageView *)[self.view viewWithTag:((index /4) % 9)+1];
@@ -83,9 +85,13 @@
 				progressBar.progress += 0.05;
 			}
 			
+            if (index == [parsedPhotos count]) 
+            {
+                if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)]) {
+                    [delegate didFinishLoadingData:self];
+                }
+            }
 		}];
-
-
 	}
 
 	NSLog(@"Number of empty photo: %d", count);
@@ -127,6 +133,7 @@
 }
 
 - (void)dealloc {
+    [parsedPhotos release];
     [loadingLabel release];
     [progressBar release];
     [coverImage release];

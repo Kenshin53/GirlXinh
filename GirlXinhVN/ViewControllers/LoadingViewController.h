@@ -10,11 +10,24 @@
 
 #import "EGOImageLoader.h"
 
+@class  LoadingViewController;
+
+@protocol LoadingViewDelegate <NSObject>
+
+-(void) didFinishLoadingData:(LoadingViewController *)viewController;
+-(void) didFailLoadingData:(LoadingViewController *) viewController;
+
+@end
+
 @interface LoadingViewController : UIViewController <EGOImageLoaderObserver>
 {
 	float delta;
 
+    id <LoadingViewDelegate> delegate;
+    NSMutableArray *parsedPhotos;
 }
+@property (retain, nonatomic) NSMutableArray *parsedPhotos;
+@property (assign, nonatomic) id <LoadingViewDelegate> delegate;
 @property (retain, nonatomic) IBOutlet UILabel *loadingLabel;
 @property (retain, nonatomic) IBOutlet UIProgressView *progressBar;
 @property (retain, nonatomic) IBOutlet UIImageView *coverImage;

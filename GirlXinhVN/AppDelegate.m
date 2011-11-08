@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoadingViewController.h"
-
+#import "PhotoGridViewControllers.h"
 @implementation AppDelegate 
 @synthesize window = _window;
 
@@ -22,13 +22,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 20, 320, 480)];
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
 
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
 
-	LoadingViewController *loadingViewController = [[[LoadingViewController alloc] initWithNibName:@"LoadingViewController" bundle:nil] autorelease];
-	[self.window addSubview:loadingViewController.view];
+    PhotoGridViewControllers *photoGridVC = [[[PhotoGridViewControllers alloc] initWithNibName:@"PhotoGridViewControllers" bundle:nil] autorelease];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:photoGridVC];
+    
+
+	[self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -41,6 +41,10 @@
 		10A011C4860B38457134DDA /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DD9 /* EGOImageLoadConnection.m */; };
 		10A011C4860B38457134DDD /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DDC /* EGOImageLoader.m */; };
 		10A011C4860B38457134DE1 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DE0 /* EGOImageView.m */; };
+		10A011C4860B38457134DE5 /* PhotoGridViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DE4 /* PhotoGridViewControllers.m */; };
+		10A011C4860B38457134DE7 /* PhotoGridViewControllers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DE6 /* PhotoGridViewControllers.xib */; };
+		10A011C4860B38457134DE9 /* PhotoGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DE8 /* PhotoGridCell.m */; };
+		FCDA417414689FD7000D4C27 /* PhotoGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA417314689FD7000D4C27 /* PhotoGridCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +117,12 @@
 		10A011C4860B38457134DDF /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
 		10A011C4860B38457134DE0 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
 		10A011C4860B38457134DE2 /* AppDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDefines.h; sourceTree = "<group>"; };
+		10A011C4860B38457134DE3 /* PhotoGridViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGridViewControllers.h; sourceTree = "<group>"; };
+		10A011C4860B38457134DE4 /* PhotoGridViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGridViewControllers.m; sourceTree = "<group>"; };
+		10A011C4860B38457134DE6 /* PhotoGridViewControllers.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGridViewControllers.xib; sourceTree = "<group>"; };
+		10A011C4860B38457134DE8 /* PhotoGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGridCell.m; sourceTree = "<group>"; };
+		10A011C4860B38457134DEA /* PhotoGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGridCell.h; sourceTree = "<group>"; };
+		FCDA417314689FD7000D4C27 /* PhotoGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoGridCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,9 +195,15 @@
 		10A011C4860B38457134D7D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				10A011C4860B38457134DEA /* PhotoGridCell.h */,
+				10A011C4860B38457134DE8 /* PhotoGridCell.m */,
+				10A011C4860B38457134DE6 /* PhotoGridViewControllers.xib */,
+				10A011C4860B38457134DE4 /* PhotoGridViewControllers.m */,
+				10A011C4860B38457134DE3 /* PhotoGridViewControllers.h */,
 				10A011C4860B38457134DA0 /* LoadingViewController.xib */,
 				10A011C4860B38457134D9E /* LoadingViewController.m */,
 				10A011C4860B38457134D9D /* LoadingViewController.h */,
+				FCDA417314689FD7000D4C27 /* PhotoGridCell.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -384,6 +400,8 @@
 			files = (
 				10A011C4860B38457134D76 /* InfoPlist.strings in Resources */,
 				10A011C4860B38457134DA1 /* LoadingViewController.xib in Resources */,
+				10A011C4860B38457134DE7 /* PhotoGridViewControllers.xib in Resources */,
+				FCDA417414689FD7000D4C27 /* PhotoGridCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +441,8 @@
 				10A011C4860B38457134DDA /* EGOImageLoadConnection.m in Sources */,
 				10A011C4860B38457134DDD /* EGOImageLoader.m in Sources */,
 				10A011C4860B38457134DE1 /* EGOImageView.m in Sources */,
+				10A011C4860B38457134DE5 /* PhotoGridViewControllers.m in Sources */,
+				10A011C4860B38457134DE9 /* PhotoGridCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +511,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GirlXinhVN/GirlXinhVN-Prefix.pch";
 				INFOPLIST_FILE = "GirlXinhVN/GirlXinhVN-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -502,6 +523,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GirlXinhVN/GirlXinhVN-Prefix.pch";
 				INFOPLIST_FILE = "GirlXinhVN/GirlXinhVN-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
