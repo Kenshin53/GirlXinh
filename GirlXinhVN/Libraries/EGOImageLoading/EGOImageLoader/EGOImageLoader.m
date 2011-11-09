@@ -30,14 +30,6 @@
 #import "UIImage+Resize.h"
 static EGOImageLoader* __imageLoader;
 
-inline static NSString* keyForURL(NSURL* url, NSString* style) {
-	if(style) {
-		return [NSString stringWithFormat:@"EGOImageLoader-%u-%u", [[url description] hash], [style hash]];
-	} else {
-		return [NSString stringWithFormat:@"EGOImageLoader-%u", [[url description] hash]];
-	}
-}
-
 #if __EGOIL_USE_BLOCKS
 	#define kNoStyle @"EGOImageLoader-nostyle"
 	#define kCompletionsKey @"completions"
@@ -112,6 +104,21 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 
 - (BOOL)isLoadingImageURL:(NSURL*)aURL {
 	return [self loadingConnectionForURL:aURL] ? YES : NO;
+}
+
+- (void)saveThumbnailImageForImage:(UIImage *)anImage withKey:(NSURL *)aURL andStyle:(NSString *) style
+{
+
+	if (anImage)
+	{
+		CGSize fullSize = anImage.size;
+		CGFloat smallerDimension = MIN(fullSize.height, fullSize.width);
+		CGFloat scale = 80.0 / smallerDimension;
+		CGSize thumbnailSize = CGSizeMake (fullSize.width * scale, fullSize.height * scale);
+		UIImage * thumbnailImage = [UIImage imageWithImage:anImage scaledToSize:thumbnailSize];
+		[[EGOCache currentCache] setData:UIImageJPEGRepresentation(thumbnailImage, 1.0) forKey:keyForURL(aURL,style) withTimeoutInterval:604800];
+
+	}
 }
 
 - (void)cancelLoadForURL:(NSURL*)aURL {
@@ -251,13 +258,7 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 	} else {
 		[[EGOCache currentCache] setData:connection.responseData forKey:keyForURL(connection.imageURL,nil) withTimeoutInterval:604800];
 
-		CGSize fullSize = anImage.size;
-		CGFloat smallerDimension = MIN(fullSize.height, fullSize.width);
-		CGFloat scale = 80.0 / smallerDimension;
-		CGSize thumbnailSize = CGSizeMake (fullSize.width * scale, fullSize.height * scale);
-	    UIImage * thumbnailImage = [UIImage imageWithImage:anImage scaledToSize:thumbnailSize];
-		[[EGOCache currentCache] setData:UIImageJPEGRepresentation(thumbnailImage, 1.0) forKey:keyForURL(connection.imageURL,@"thumbnail") withTimeoutInterval:604800];
-
+		[self saveThumbnailImageForImage:anImage withKey:connection.imageURL andStyle:@"thumbnail"];
 		[currentConnections removeObjectForKey:connection.imageURL];
 		self.currentConnections = [[currentConnections copy] autorelease];
 		
@@ -319,6 +320,7 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 			dispatch_async(kStylerQueue, ^{
 				UIImage* anImage = styler(image);
 				[[EGOCache currentCache] setImage:anImage forKey:keyForURL(imageURL, styleKey) withTimeoutInterval:604800];
+				[self saveThumbnailImageForImage:anImage withKey:imageURL andStyle:@"thumbnail"];
 				callCompletions(anImage, [handler objectForKey:kCompletionsKey]);
 			});
 		} else {

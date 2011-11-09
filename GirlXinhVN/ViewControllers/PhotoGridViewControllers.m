@@ -11,14 +11,9 @@
 #import "LoadingViewController.h"
 #import "EGOCache.h"
 #import "Photo.h"
-
-inline static NSString* keyForURL(NSURL* url, NSString* style) {
-	if(style) {
-		return [NSString stringWithFormat:@"EGOImageLoader-%u-%u", [[url description] hash], [style hash]];
-	} else {
-		return [NSString stringWithFormat:@"EGOImageLoader-%u", [[url description] hash]];
-	}
-}
+#import "MWPhotoBrowser.h"
+#import "MWPhoto.h"
+#import "PhotoViewerViewController.h"
 
 
 @implementation PhotoGridViewControllers
@@ -196,5 +191,27 @@ inline static NSString* keyForURL(NSURL* url, NSString* style) {
 
 	
 }
+
+- (void)gridView:(DTGridView *)gridView selectionMadeAtRow:(NSInteger)rowIndex column:(NSInteger)columnIndex;
+{
+//	Photo *aPhoto = [self.photos objectAtIndex:rowIndex * 4 + columnIndex];
+//	PhotoViewerViewController *photoViewerViewController = [[PhotoViewerViewController alloc] initWithNibName:@"PhotoViewerViewController" bundle:nil];
+//	photoViewerViewController.wantsFullScreenLayout = YES;
+//	photoViewerViewController.photo = aPhoto;
+//	[self.navigationController pushViewController:photoViewerViewController animated:YES];
+//	[photoViewerViewController release];
+	Photo *aPhoto = [self.photos objectAtIndex:rowIndex * 4 + columnIndex];
+	NSMutableArray *photos = [[NSMutableArray alloc] init];
+	NSURL *aURL = [NSURL URLWithString:aPhoto.bigPhotoURL];
+	[photos addObject:[MWPhoto photoWithFilePath:cachePathForKey(keyForURL(aURL, nil))]];
+
+	MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithPhotos:photos];
+	//[browser setInitialPageIndex:0]; // Can be changed if desired
+	[self.navigationController pushViewController:browser animated:YES];
+	[browser release];
+	[photos release];
+
+}
+
 
 @end

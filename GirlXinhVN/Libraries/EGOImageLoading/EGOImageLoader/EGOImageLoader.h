@@ -35,6 +35,8 @@
 #endif
 
 @protocol EGOImageLoaderObserver;
+@class EGOImageLoadConnection;
+
 @interface EGOImageLoader : NSObject/*<NSURLConnectionDelegate>*/ {
 @private
 	NSDictionary* _currentConnections;
@@ -64,6 +66,8 @@
 #endif
 
 - (BOOL)hasLoadedImageURL:(NSURL*)aURL;
+
+- (void)saveThumbnailImageForImage:(UIImage *)anImage withKey:(NSURL *)aURL andStyle:(NSString *) style;
 - (void)cancelLoadForURL:(NSURL*)aURL;
 
 - (void)clearCacheForURL:(NSURL*)aURL;
@@ -77,3 +81,11 @@
 - (void)imageLoaderDidLoad:(NSNotification*)notification; // Object will be EGOImageLoader, userInfo will contain imageURL and image
 - (void)imageLoaderDidFailToLoad:(NSNotification*)notification; // Object will be EGOImageLoader, userInfo will contain error
 @end
+
+inline static NSString* keyForURL(NSURL* url, NSString* style) {
+	if(style) {
+		return [NSString stringWithFormat:@"EGOImageLoader-%u-%u", [[url description] hash], [style hash]];
+	} else {
+		return [NSString stringWithFormat:@"EGOImageLoader-%u", [[url description] hash]];
+	}
+}

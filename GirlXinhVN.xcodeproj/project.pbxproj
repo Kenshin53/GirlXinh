@@ -46,6 +46,14 @@
 		FCDA417414689FD7000D4C3D /* DTSnapGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C3C /* DTSnapGridView.m */; };
 		FCDA417414689FD7000D4C40 /* DTSnapGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C3F /* DTSnapGridViewCell.m */; };
 		FCDA417414689FD7000D4C43 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C42 /* UIImage+Resize.m */; };
+		FCDA417414689FD7000D4C47 /* PhotoViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C46 /* PhotoViewerViewController.m */; };
+		FCDA417414689FD7000D4C49 /* PhotoViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C48 /* PhotoViewerViewController.xib */; };
+		FCDA417414689FD7000D4C4C /* MWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C4B /* MWPhotoBrowser.m */; };
+		FCDA417414689FD7000D4C4F /* MWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C4E /* MWPhoto.m */; };
+		FCDA417414689FD7000D4C52 /* ZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C51 /* ZoomingScrollView.m */; };
+		FCDA417414689FD7000D4C55 /* UIImageViewTap.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C54 /* UIImageViewTap.m */; };
+		FCDA417414689FD7000D4C58 /* UIViewTap.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C57 /* UIViewTap.m */; };
+		FCDA417414689FD7000D4C5B /* UIImage+Decompress.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C5A /* UIImage+Decompress.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +134,21 @@
 		FCDA417414689FD7000D4C3F /* DTSnapGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSnapGridViewCell.m; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C42 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C44 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C45 /* PhotoViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewerViewController.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C46 /* PhotoViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewerViewController.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C48 /* PhotoViewerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewerViewController.xib; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C4A /* MWPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhotoBrowser.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C4B /* MWPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWPhotoBrowser.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C4D /* MWPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhoto.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C4E /* MWPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWPhoto.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C50 /* ZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomingScrollView.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C51 /* ZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomingScrollView.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C53 /* UIImageViewTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewTap.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C54 /* UIImageViewTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewTap.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C56 /* UIViewTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewTap.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C57 /* UIViewTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTap.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C59 /* UIImage+Decompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Decompress.h"; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C5A /* UIImage+Decompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Decompress.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +221,9 @@
 		10A011C4860B38457134D7D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCDA417414689FD7000D4C48 /* PhotoViewerViewController.xib */,
+				FCDA417414689FD7000D4C46 /* PhotoViewerViewController.m */,
+				FCDA417414689FD7000D4C45 /* PhotoViewerViewController.h */,
 				10A011C4860B38457134DEA /* PhotoGridCell.h */,
 				10A011C4860B38457134DE8 /* PhotoGridCell.m */,
 				10A011C4860B38457134DE6 /* PhotoGridViewControllers.xib */,
@@ -230,6 +256,18 @@
 		10A011C4860B38457134D80 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				FCDA417414689FD7000D4C5A /* UIImage+Decompress.m */,
+				FCDA417414689FD7000D4C59 /* UIImage+Decompress.h */,
+				FCDA417414689FD7000D4C57 /* UIViewTap.m */,
+				FCDA417414689FD7000D4C56 /* UIViewTap.h */,
+				FCDA417414689FD7000D4C54 /* UIImageViewTap.m */,
+				FCDA417414689FD7000D4C53 /* UIImageViewTap.h */,
+				FCDA417414689FD7000D4C51 /* ZoomingScrollView.m */,
+				FCDA417414689FD7000D4C50 /* ZoomingScrollView.h */,
+				FCDA417414689FD7000D4C4E /* MWPhoto.m */,
+				FCDA417414689FD7000D4C4D /* MWPhoto.h */,
+				FCDA417414689FD7000D4C4B /* MWPhotoBrowser.m */,
+				FCDA417414689FD7000D4C4A /* MWPhotoBrowser.h */,
 				10A011C4860B38457134DA6 /* NSString+Utils.m */,
 				10A011C4860B38457134DA5 /* NSString+Utils.h */,
 				10A011C4860B38457134D9B /* AsyncURLConnection.m */,
@@ -415,6 +453,7 @@
 				10A011C4860B38457134DA1 /* LoadingViewController.xib in Resources */,
 				10A011C4860B38457134DE7 /* PhotoGridViewControllers.xib in Resources */,
 				FCDA417414689FD7000D4C27 /* PhotoGridCell.xib in Resources */,
+				FCDA417414689FD7000D4C49 /* PhotoViewerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +496,13 @@
 				FCDA417414689FD7000D4C3D /* DTSnapGridView.m in Sources */,
 				FCDA417414689FD7000D4C40 /* DTSnapGridViewCell.m in Sources */,
 				FCDA417414689FD7000D4C43 /* UIImage+Resize.m in Sources */,
+				FCDA417414689FD7000D4C47 /* PhotoViewerViewController.m in Sources */,
+				FCDA417414689FD7000D4C4C /* MWPhotoBrowser.m in Sources */,
+				FCDA417414689FD7000D4C4F /* MWPhoto.m in Sources */,
+				FCDA417414689FD7000D4C52 /* ZoomingScrollView.m in Sources */,
+				FCDA417414689FD7000D4C55 /* UIImageViewTap.m in Sources */,
+				FCDA417414689FD7000D4C58 /* UIViewTap.m in Sources */,
+				FCDA417414689FD7000D4C5B /* UIImage+Decompress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
