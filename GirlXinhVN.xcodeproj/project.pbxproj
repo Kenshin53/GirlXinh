@@ -46,8 +46,6 @@
 		FCDA417414689FD7000D4C3D /* DTSnapGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C3C /* DTSnapGridView.m */; };
 		FCDA417414689FD7000D4C40 /* DTSnapGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C3F /* DTSnapGridViewCell.m */; };
 		FCDA417414689FD7000D4C43 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C42 /* UIImage+Resize.m */; };
-		FCDA417414689FD7000D4C47 /* PhotoViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C46 /* PhotoViewerViewController.m */; };
-		FCDA417414689FD7000D4C49 /* PhotoViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C48 /* PhotoViewerViewController.xib */; };
 		FCDA417414689FD7000D4C4C /* MWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C4B /* MWPhotoBrowser.m */; };
 		FCDA417414689FD7000D4C4F /* MWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C4E /* MWPhoto.m */; };
 		FCDA417414689FD7000D4C52 /* ZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C51 /* ZoomingScrollView.m */; };
@@ -134,9 +132,6 @@
 		FCDA417414689FD7000D4C3F /* DTSnapGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSnapGridViewCell.m; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C42 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C44 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
-		FCDA417414689FD7000D4C45 /* PhotoViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewerViewController.h; sourceTree = "<group>"; };
-		FCDA417414689FD7000D4C46 /* PhotoViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewerViewController.m; sourceTree = "<group>"; };
-		FCDA417414689FD7000D4C48 /* PhotoViewerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewerViewController.xib; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C4A /* MWPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhotoBrowser.h; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C4B /* MWPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWPhotoBrowser.m; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C4D /* MWPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhoto.h; sourceTree = "<group>"; };
@@ -221,9 +216,6 @@
 		10A011C4860B38457134D7D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCDA417414689FD7000D4C48 /* PhotoViewerViewController.xib */,
-				FCDA417414689FD7000D4C46 /* PhotoViewerViewController.m */,
-				FCDA417414689FD7000D4C45 /* PhotoViewerViewController.h */,
 				10A011C4860B38457134DEA /* PhotoGridCell.h */,
 				10A011C4860B38457134DE8 /* PhotoGridCell.m */,
 				10A011C4860B38457134DE6 /* PhotoGridViewControllers.xib */,
@@ -453,7 +445,6 @@
 				10A011C4860B38457134DA1 /* LoadingViewController.xib in Resources */,
 				10A011C4860B38457134DE7 /* PhotoGridViewControllers.xib in Resources */,
 				FCDA417414689FD7000D4C27 /* PhotoGridCell.xib in Resources */,
-				FCDA417414689FD7000D4C49 /* PhotoViewerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +487,6 @@
 				FCDA417414689FD7000D4C3D /* DTSnapGridView.m in Sources */,
 				FCDA417414689FD7000D4C40 /* DTSnapGridViewCell.m in Sources */,
 				FCDA417414689FD7000D4C43 /* UIImage+Resize.m in Sources */,
-				FCDA417414689FD7000D4C47 /* PhotoViewerViewController.m in Sources */,
 				FCDA417414689FD7000D4C4C /* MWPhotoBrowser.m in Sources */,
 				FCDA417414689FD7000D4C4F /* MWPhoto.m in Sources */,
 				FCDA417414689FD7000D4C52 /* ZoomingScrollView.m in Sources */,

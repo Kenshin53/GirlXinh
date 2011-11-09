@@ -13,8 +13,6 @@
 #import "Photo.h"
 #import "MWPhotoBrowser.h"
 #import "MWPhoto.h"
-#import "PhotoViewerViewController.h"
-
 
 @implementation PhotoGridViewControllers
 @synthesize gridView =_gridView;
@@ -200,16 +198,21 @@
 //	photoViewerViewController.photo = aPhoto;
 //	[self.navigationController pushViewController:photoViewerViewController animated:YES];
 //	[photoViewerViewController release];
-	Photo *aPhoto = [self.photos objectAtIndex:rowIndex * 4 + columnIndex];
-	NSMutableArray *photos = [[NSMutableArray alloc] init];
-	NSURL *aURL = [NSURL URLWithString:aPhoto.bigPhotoURL];
-	[photos addObject:[MWPhoto photoWithFilePath:cachePathForKey(keyForURL(aURL, nil))]];
 
-	MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithPhotos:photos];
-	//[browser setInitialPageIndex:0]; // Can be changed if desired
+
+    
+	NSMutableArray *mwPhotos = [[NSMutableArray alloc] init];
+    for (Photo *aPhoto in self.photos) 
+    {
+        NSURL *aURL = [NSURL URLWithString:aPhoto.bigPhotoURL];
+        [mwPhotos addObject:[MWPhoto photoWithFilePath:cachePathForKey(keyForURL(aURL, nil))]];
+    }
+
+	MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithPhotos:mwPhotos];
+	[browser setInitialPageIndex:rowIndex * 4 + columnIndex]; // Can be changed if desired
 	[self.navigationController pushViewController:browser animated:YES];
 	[browser release];
-	[photos release];
+	[mwPhotos release];
 
 }
 
