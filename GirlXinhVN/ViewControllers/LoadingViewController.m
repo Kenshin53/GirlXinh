@@ -12,7 +12,7 @@
 #import "SBJsonParser.h"
 #import "Photo.h"
 #import "EGOImageLoader.h"
-
+#import "EGOCache.h"
 #define kJSONDataProgress 0.0
 
 @implementation LoadingViewController
@@ -62,7 +62,6 @@
 		[[EGOImageLoader sharedImageLoader] loadImageForURL:[NSURL URLWithString:aPhoto.bigPhotoURL]
 		                                         completion:^void(UIImage *image, NSURL *imageURL, NSError *error)
 		{
-			aPhoto.imageCached = YES;
 			if (index % 4 == 0)
 			{
 				UIImageView *imageView = (UIImageView *)[self.view viewWithTag:((index /4) % 9)+1];
@@ -77,6 +76,7 @@
 
             if (index == [parsedPhotos count])
             {
+
                 if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)]) {
                     [delegate didFinishLoadingData:self];
                 }
@@ -85,10 +85,28 @@
 	}
 }
 
+- (void)cleanUpSavedPhotosArray:(NSArray *)savedPhotos; {
+	NSMutableArray *arrayToDeleted = [[NSMutableArray alloc] initWithCapacity:0];
+	for(Photo *aPhoto in savedPhotos)
+	{
+
+		NSURL *aURl = [NSURL URLWithString:aPhoto.bigPhotoURL];
+		aPhoto.imageCached = [[EGOCache currentCache] hasCacheForKey:keyForURL(aURl, nil)];
+		aPhoto.thumbnailCached = [[EGOCache currentCache] hasCacheForKey:keyForURL(aURl, @"thumbnail")];
+		if ( ! aPhoto.imageCached )
+			[arrayToDeleted addObject:aPhoto];
+	}
+
+	self.parsedPhotos = savedPhotos;
+	[parsedPhotos removeObjectsInArray:arrayToDeleted];
+}
+
 - (void)dismissViewControllerWithSavedPhotos:(NSArray *)savedPhotos
 {
-    self.parsedPhotos = savedPhotos;
-    if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)])
+	[self cleanUpSavedPhotosArray:savedPhotos];
+	NSString *savedPhotosFilePath = [self savedPhotosFilePath];
+	[NSKeyedArchiver archiveRootObject:parsedPhotos toFile:savedPhotosFilePath];
+	if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)])
         [delegate didFinishLoadingData:self];
 }
 

@@ -13,7 +13,7 @@
 #import "Photo.h"
 #import "MWPhotoBrowser.h"
 #import "MWPhoto.h"
-
+#import "EGOCache.h"
 @implementation PhotoGridViewControllers
 @synthesize gridView =_gridView;
 @synthesize photos;
@@ -96,6 +96,12 @@
 -(void)didFinishLoadingData:(LoadingViewController *)viewController
 {
     self.photos = viewController.parsedPhotos;
+
+	NSArray* documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString* documentRootPath = [documentPaths objectAtIndex:0];
+	NSString *savedPhotosFilePath = [documentRootPath stringByAppendingString:@"savedPhotos.plist"];
+
+	[NSKeyedArchiver archiveRootObject:photos toFile:savedPhotosFilePath];
     [self dismissModalViewControllerAnimated:YES];
 	[self.gridView reloadData];
 
