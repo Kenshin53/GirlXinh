@@ -13,6 +13,10 @@
 }
 @synthesize photoID;
 @synthesize bigPhotoURL;
+@synthesize imageCached;
+@synthesize thumbnailCached;
+
+
 
 
 //===========================================================
@@ -23,6 +27,8 @@
 {
     [encoder encodeObject:self.photoID forKey:@"photoID"];
     [encoder encodeObject:self.bigPhotoURL forKey:@"bigPhotoURL"];
+    [encoder encodeBool:self.imageCached forKey:@"imageCached"];
+    [encoder encodeBool:self.thumbnailCached forKey:@"thumbnailCached"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -31,6 +37,8 @@
     if (self) {
         self.photoID = [decoder decodeObjectForKey:@"photoID"];
         self.bigPhotoURL = [decoder decodeObjectForKey:@"bigPhotoURL"];
+        self.imageCached = [decoder decodeBoolForKey:@"imageCached"];
+        self.thumbnailCached = [decoder decodeBoolForKey:@"thumbnailCached"];
     }
     return self;
 }

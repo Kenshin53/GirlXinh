@@ -10,11 +10,17 @@
 
 @interface Photo : NSObject <NSCoding>
 {
-	NSString *photoID;
-	NSString *bigPhotoURL;
+	NSString    *photoID;
+	NSString    *bigPhotoURL;
+	BOOL        imageCached;
+	BOOL        thumbnailCached;
 
 }
+
 @property(nonatomic, retain) NSString *photoID;
 @property(nonatomic, retain) NSString *bigPhotoURL;
+@property(nonatomic) BOOL imageCached;
+@property(nonatomic) BOOL thumbnailCached;
+
 
 @end

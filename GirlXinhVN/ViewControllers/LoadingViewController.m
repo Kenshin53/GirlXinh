@@ -41,38 +41,28 @@
 
 #pragma mark - View lifecycle
 
-- (void)parseResult:(NSData *)data
+- (NSString *)savedPhotosFilePath
 {
-	SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
-	NSDictionary *result = [jsonParser objectWithData:data];
-
-	NSArray *photos  = [result objectForKey:@"data"];
-	parsedPhotos = [[NSMutableArray alloc] initWithCapacity:[photos count]];
-
-	NSInteger count =0;
-	for(NSDictionary *aPhotoDict in photos)
-	{
-		Photo *aPhoto = [[Photo alloc] init];
-		aPhoto.photoID = [aPhotoDict objectForKey:@"pid"];
-		aPhoto.bigPhotoURL = [aPhotoDict objectForKey:@"src_big"];
-		[parsedPhotos addObject:aPhoto];
-		[aPhoto release];
-	}
-
 	NSArray* documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString* documentRootPath = [documentPaths objectAtIndex:0];
-	[NSKeyedArchiver archiveRootObject:parsedPhotos toFile:documentRootPath];
+	NSString* documentRootPath = [documentPaths objectAtIndex:0];
+	NSString *savedPhotosFilePath = [documentRootPath stringByAppendingString:@"savedPhotos.plist"];
+	return savedPhotosFilePath;
+}
 
+// TODO: Handle broken download.
+
+- (void)downloadImages; {
 	delta = (1 - kJSONDataProgress) / [parsedPhotos count];
-	
-	__block  int step = [parsedPhotos count]/20;
-    __block int index = 0;
 
-    for (Photo *aPhoto in parsedPhotos)
+	__block  int step = [parsedPhotos count]/20;
+	__block int index = 0;
+
+	for (Photo *aPhoto in parsedPhotos)
 	{
 		[[EGOImageLoader sharedImageLoader] loadImageForURL:[NSURL URLWithString:aPhoto.bigPhotoURL]
 		                                         completion:^void(UIImage *image, NSURL *imageURL, NSError *error)
 		{
+			aPhoto.imageCached = YES;
 			if (index % 4 == 0)
 			{
 				UIImageView *imageView = (UIImageView *)[self.view viewWithTag:((index /4) % 9)+1];
@@ -84,8 +74,8 @@
 			{
 				progressBar.progress += 0.05;
 			}
-			
-            if (index == [parsedPhotos count]) 
+
+            if (index == [parsedPhotos count])
             {
                 if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)]) {
                     [delegate didFinishLoadingData:self];
@@ -93,6 +83,46 @@
             }
 		}];
 	}
+}
+
+- (void)dismissViewControllerWithSavedPhotos:(NSArray *)savedPhotos
+{
+    self.parsedPhotos = savedPhotos;
+    if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)])
+        [delegate didFinishLoadingData:self];
+}
+
+- (void)parseResult:(NSData *)data
+{
+	NSArray *savedPhotos = [NSKeyedUnarchiver unarchiveObjectWithFile:[self savedPhotosFilePath]];
+
+	SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+	NSDictionary *result = [jsonParser objectWithData:data];
+	NSArray *photos  = [result objectForKey:@"data"];
+	[jsonParser release];
+
+	if ([photos count] == [savedPhotos count])
+	{
+		progressBar.progress = 1.0;
+		[self dismissViewControllerWithSavedPhotos:savedPhotos];
+		return;
+	}
+
+	parsedPhotos = [[NSMutableArray alloc] initWithCapacity:[photos count]];
+	NSInteger count =0;
+	for(NSDictionary *aPhotoDict in photos)
+	{
+		Photo *aPhoto = [[Photo alloc] init];
+		aPhoto.photoID = [aPhotoDict objectForKey:@"pid"];
+		aPhoto.bigPhotoURL = [aPhotoDict objectForKey:@"src_big"];
+		[parsedPhotos addObject:aPhoto];
+		[aPhoto release];
+	}
+
+	[self downloadImages];
+
+	NSString *savedPhotosFilePath = [self savedPhotosFilePath];
+	[NSKeyedArchiver archiveRootObject:parsedPhotos toFile:savedPhotosFilePath];
 
 	NSLog(@"Number of empty photo: %d", count);
 	NSLog(@"Done");
@@ -110,7 +140,23 @@
 		progressBar.progress = kJSONDataProgress;
 		[self parseResult:data];
 	} errorBlock:^void(NSError *error) {
-		NSLog(@"Error: %@", [error description]);
+		NSArray *savedPhotos = [NSKeyedUnarchiver unarchiveObjectWithFile:[self savedPhotosFilePath]];
+		if (savedPhotos && [savedPhotos count])
+		{
+			progressBar.progress = 1.0;
+			self.parsedPhotos = savedPhotos;
+			if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)])
+			{
+                [self performSelector:@selector(dismissViewControllerWithSavedPhotos:) withObject:savedPhotos afterDelay:0.5];
+//				[self.view removeFromSuperview];
+			}
+			return;
+		}
+		else
+		{
+			UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Cannot download images. Please check your internet connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+			[alertView show];
+		}
 	}];
 
 

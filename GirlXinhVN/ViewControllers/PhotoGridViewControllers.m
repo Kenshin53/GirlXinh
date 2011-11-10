@@ -55,7 +55,7 @@
     self.navigationController.navigationBar.tintColor = nil;
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     
-    l   oadingViewController= [[LoadingViewController alloc] initWithNibName:@"LoadingViewController" bundle:nil];
+    loadingViewController= [[LoadingViewController alloc] initWithNibName:@"LoadingViewController" bundle:nil];
     loadingViewController.delegate = self;
     [self presentModalViewController:loadingViewController animated:YES];
     // Do any additional setup after loading the view from its nib.
