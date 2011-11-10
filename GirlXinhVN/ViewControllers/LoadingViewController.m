@@ -103,7 +103,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	NSString *requestURL = [NSString stringByEscapingString:@"https://graph.facebook.com/fql?q=select caption, src_big from photo where aid ='108425012571651_29383'"];
-	NSString *queryString = @"https://graph.facebook.com/fql?q=select pid, src_big from photo where aid =\"108425012571651_29383\"";
+	NSString *queryString = @"https://graph.facebook.com/fql?q=select pid, src_big from photo where aid =\"108425012571651_29383\" order by created desc";
 
 	[AsyncURLConnection request:[queryString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] completeBlock:^void(NSData *data) {
 		NSLog(@"Finished loading.");

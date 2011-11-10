@@ -30,7 +30,6 @@
 		10A011C4860B38457134DCB /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DCA /* SBJsonUTF8Stream.m */; };
 		10A011C4860B38457134DCE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DCD /* SBJsonWriter.m */; };
 		10A011C4860B38457134DD0 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DCF /* Photo.m */; };
-		10A011C4860B38457134DD6 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DD5 /* EGOCache.m */; };
 		10A011C4860B38457134DDA /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DD9 /* EGOImageLoadConnection.m */; };
 		10A011C4860B38457134DDD /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DDC /* EGOImageLoader.m */; };
 		10A011C4860B38457134DE1 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A011C4860B38457134DE0 /* EGOImageView.m */; };
@@ -100,8 +99,6 @@
 		10A011C4860B38457134DCD /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		10A011C4860B38457134DCF /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		10A011C4860B38457134DD1 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
-		10A011C4860B38457134DD4 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
-		10A011C4860B38457134DD5 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		10A011C4860B38457134DD8 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
 		10A011C4860B38457134DD9 /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
 		10A011C4860B38457134DDB /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
@@ -308,20 +305,10 @@
 		10A011C4860B38457134DD2 /* EGOImageLoading */ = {
 			isa = PBXGroup;
 			children = (
-				10A011C4860B38457134DD3 /* EGOCache */,
 				10A011C4860B38457134DD7 /* EGOImageLoader */,
 				10A011C4860B38457134DDE /* EGOImageView */,
 			);
 			path = EGOImageLoading;
-			sourceTree = "<group>";
-		};
-		10A011C4860B38457134DD3 /* EGOCache */ = {
-			isa = PBXGroup;
-			children = (
-				10A011C4860B38457134DD5 /* EGOCache.m */,
-				10A011C4860B38457134DD4 /* EGOCache.h */,
-			);
-			path = EGOCache;
 			sourceTree = "<group>";
 		};
 		10A011C4860B38457134DD7 /* EGOImageLoader */ = {
@@ -473,7 +460,6 @@
 				10A011C4860B38457134DCB /* SBJsonUTF8Stream.m in Sources */,
 				10A011C4860B38457134DCE /* SBJsonWriter.m in Sources */,
 				10A011C4860B38457134DD0 /* Photo.m in Sources */,
-				10A011C4860B38457134DD6 /* EGOCache.m in Sources */,
 				10A011C4860B38457134DDA /* EGOImageLoadConnection.m in Sources */,
 				10A011C4860B38457134DDD /* EGOImageLoader.m in Sources */,
 				10A011C4860B38457134DE1 /* EGOImageView.m in Sources */,

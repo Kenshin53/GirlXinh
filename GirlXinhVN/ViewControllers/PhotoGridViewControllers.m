@@ -52,8 +52,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.tintColor = nil;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     
-    loadingViewController= [[LoadingViewController alloc] initWithNibName:@"LoadingViewController" bundle:nil];
+    l   oadingViewController= [[LoadingViewController alloc] initWithNibName:@"LoadingViewController" bundle:nil];
     loadingViewController.delegate = self;
     [self presentModalViewController:loadingViewController animated:YES];
     // Do any additional setup after loading the view from its nib.
@@ -130,7 +132,7 @@
 // ***********************************************************************************
 - (NSInteger)numberOfColumnsInGridView:(DTGridView *)gridView forRowWithIndex:(NSInteger)index;
 {
-	return 4;
+	return 3;
 
 }
 
@@ -143,7 +145,7 @@
 - (CGFloat)gridView:(DTGridView *)gridView heightForRow:(NSInteger)rowIndex;
 {
 
-	return 80.0;
+	return 106.0;
 
 }
 
@@ -155,7 +157,7 @@
 // ***********************************************************************************
 - (CGFloat)gridView:(DTGridView *)gridView widthForCellAtRow:(NSInteger)rowIndex column:(NSInteger)columnIndex;
 {
-	return 80.0;
+	return 106.0;
 }
 
 
@@ -182,7 +184,7 @@
 		
 	}
     
-    NSURL *aURL = [NSURL URLWithString:[[photos objectAtIndex:rowIndex * 4 + columnIndex] bigPhotoURL]];
+    NSURL *aURL = [NSURL URLWithString:[[photos objectAtIndex:rowIndex * 3 + columnIndex] bigPhotoURL]];
     cell.imageView.image = [[EGOCache currentCache] imageForKey:keyForURL(aURL,@"thumbnail")];
 
 	return cell;
@@ -209,7 +211,7 @@
     }
 
 	MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithPhotos:mwPhotos];
-	[browser setInitialPageIndex:rowIndex * 4 + columnIndex]; // Can be changed if desired
+	[browser setInitialPageIndex:rowIndex * 3 + columnIndex]; // Can be changed if desired
 	[self.navigationController pushViewController:browser animated:YES];
 	[browser release];
 	[mwPhotos release];

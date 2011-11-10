@@ -113,7 +113,7 @@ static EGOImageLoader* __imageLoader;
 	{
 		CGSize fullSize = anImage.size;
 		CGFloat smallerDimension = MIN(fullSize.height, fullSize.width);
-		CGFloat scale = 80.0 / smallerDimension;
+		CGFloat scale = 204.0 / smallerDimension;
 		CGSize thumbnailSize = CGSizeMake (fullSize.width * scale, fullSize.height * scale);
 		UIImage * thumbnailImage = [UIImage imageWithImage:anImage scaledToSize:thumbnailSize];
 		[[EGOCache currentCache] setData:UIImageJPEGRepresentation(thumbnailImage, 1.0) forKey:keyForURL(aURL,style) withTimeoutInterval:604800];
