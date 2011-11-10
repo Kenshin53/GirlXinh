@@ -51,6 +51,7 @@
 		FCDA417414689FD7000D4C55 /* UIImageViewTap.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C54 /* UIImageViewTap.m */; };
 		FCDA417414689FD7000D4C58 /* UIViewTap.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C57 /* UIViewTap.m */; };
 		FCDA417414689FD7000D4C5B /* UIImage+Decompress.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C5A /* UIImage+Decompress.m */; };
+		FCDA417414689FD7000D4C5E /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C5D /* EGOCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +142,8 @@
 		FCDA417414689FD7000D4C57 /* UIViewTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewTap.m; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C59 /* UIImage+Decompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Decompress.h"; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C5A /* UIImage+Decompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Decompress.m"; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C5D /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C5F /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +310,7 @@
 			children = (
 				10A011C4860B38457134DD7 /* EGOImageLoader */,
 				10A011C4860B38457134DDE /* EGOImageView */,
+				FCDA417414689FD7000D4C5C /* EGOCache */,
 			);
 			path = EGOImageLoading;
 			sourceTree = "<group>";
@@ -376,6 +380,15 @@
 				FCDA417414689FD7000D4C42 /* UIImage+Resize.m */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FCDA417414689FD7000D4C5C /* EGOCache */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA417414689FD7000D4C5F /* EGOCache.h */,
+				FCDA417414689FD7000D4C5D /* EGOCache.m */,
+			);
+			path = EGOCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +492,7 @@
 				FCDA417414689FD7000D4C55 /* UIImageViewTap.m in Sources */,
 				FCDA417414689FD7000D4C58 /* UIViewTap.m in Sources */,
 				FCDA417414689FD7000D4C5B /* UIImage+Decompress.m in Sources */,
+				FCDA417414689FD7000D4C5E /* EGOCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
