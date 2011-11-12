@@ -52,6 +52,7 @@
 		FCDA417414689FD7000D4C58 /* UIViewTap.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C57 /* UIViewTap.m */; };
 		FCDA417414689FD7000D4C5B /* UIImage+Decompress.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C5A /* UIImage+Decompress.m */; };
 		FCDA417414689FD7000D4C5E /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C5D /* EGOCache.m */; };
+		FCDA417414689FD7000D4C61 /* PhotoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDA417414689FD7000D4C60 /* PhotoParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,8 @@
 		FCDA417414689FD7000D4C5A /* UIImage+Decompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Decompress.m"; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C5D /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		FCDA417414689FD7000D4C5F /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C60 /* PhotoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoParser.m; sourceTree = "<group>"; };
+		FCDA417414689FD7000D4C62 /* PhotoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoParser.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +235,8 @@
 		10A011C4860B38457134D7E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FCDA417414689FD7000D4C62 /* PhotoParser.h */,
+				FCDA417414689FD7000D4C60 /* PhotoParser.m */,
 				10A011C4860B38457134DD1 /* Photo.h */,
 				10A011C4860B38457134DCF /* Photo.m */,
 			);
@@ -493,6 +498,7 @@
 				FCDA417414689FD7000D4C58 /* UIViewTap.m in Sources */,
 				FCDA417414689FD7000D4C5B /* UIImage+Decompress.m in Sources */,
 				FCDA417414689FD7000D4C5E /* EGOCache.m in Sources */,
+				FCDA417414689FD7000D4C61 /* PhotoParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

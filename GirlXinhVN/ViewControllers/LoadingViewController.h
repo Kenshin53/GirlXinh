@@ -9,8 +9,9 @@
 
 
 #import "EGOImageLoader.h"
-
+#import "PhotoParser.h"
 @class  LoadingViewController;
+
 
 @protocol LoadingViewDelegate <NSObject>
 
@@ -19,18 +20,21 @@
 
 @end
 
-@interface LoadingViewController : UIViewController <EGOImageLoaderObserver>
+@interface LoadingViewController : UIViewController <EGOImageLoaderObserver, PhotoParserDelegate >
 {
-	float delta;
 
     id <LoadingViewDelegate> delegate;
-    NSMutableArray *parsedPhotos;
+	PhotoParser *photoParser;
+	NSMutableArray *downloadedPhotos;
+	NSTimer *updateTimer;
+	NSUInteger index;
+	NSInteger totalImageToDownload;
+	NSInteger numberOfDownloadedImage;
+
 }
-@property (retain, nonatomic) NSMutableArray *parsedPhotos;
 @property (assign, nonatomic) id <LoadingViewDelegate> delegate;
 @property (retain, nonatomic) IBOutlet UILabel *loadingLabel;
 @property (retain, nonatomic) IBOutlet UIProgressView *progressBar;
 @property (retain, nonatomic) IBOutlet UIImageView *coverImage;
 
-- (void)parseResult:(NSData *)data;
 @end

@@ -14,7 +14,6 @@
 	NSString    *bigPhotoURL;
 	BOOL        imageCached;
 	BOOL        thumbnailCached;
-
 }
 
 @property(nonatomic, retain) NSString *photoID;

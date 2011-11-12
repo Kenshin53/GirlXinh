@@ -8,12 +8,10 @@
 
 #import "PhotoGridViewControllers.h"
 #import "PhotoGridCell.h"
-#import "LoadingViewController.h"
 #import "EGOCache.h"
 #import "Photo.h"
 #import "MWPhotoBrowser.h"
-#import "MWPhoto.h"
-#import "EGOCache.h"
+
 @implementation PhotoGridViewControllers
 @synthesize gridView =_gridView;
 @synthesize photos;
@@ -24,6 +22,7 @@
 // ***********************************************************************************
 - (void)dealloc
 {
+	[loadingViewController release];
     [photos release];
     [_gridView release];
     [super dealloc];
@@ -54,13 +53,10 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = nil;
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-    
-    loadingViewController= [[LoadingViewController alloc] initWithNibName:@"LoadingViewController" bundle:nil];
-    loadingViewController.delegate = self;
-    [self presentModalViewController:loadingViewController animated:YES];
-    // Do any additional setup after loading the view from its nib.
+	loadingViewController = [[LoadingViewController alloc] initWithNibName:@"LoadingViewController" bundle:nil];
+	loadingViewController.delegate = self;
+	[self.navigationController presentModalViewController:loadingViewController animated:YES];
 }
-
 
 // ***********************************************************************************
 //
@@ -95,14 +91,9 @@
 // ***********************************************************************************
 -(void)didFinishLoadingData:(LoadingViewController *)viewController
 {
-    self.photos = viewController.parsedPhotos;
 
-	NSArray* documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString* documentRootPath = [documentPaths objectAtIndex:0];
-	NSString *savedPhotosFilePath = [documentRootPath stringByAppendingString:@"savedPhotos.plist"];
-
-	[NSKeyedArchiver archiveRootObject:photos toFile:savedPhotosFilePath];
-    [self dismissModalViewControllerAnimated:YES];
+	[self.navigationController dismissModalViewControllerAnimated:YES];
+	photos = [[PhotoParser downloadedPhotos] mutableCopy];
 	[self.gridView reloadData];
 
 }
@@ -126,8 +117,11 @@
 // ***********************************************************************************
 - (NSInteger)numberOfRowsInGridView:(DTGridView *)gridView;
 {
-	return 250;
-
+    NSInteger numberOfRow  = [self.photos count] / 3;
+    NSInteger extraRow = [self.photos count] % 3 == 0 ? 0 : 1;
+	return numberOfRow + extraRow;
+    
+//    return 50;
 }
 
 
@@ -138,6 +132,8 @@
 // ***********************************************************************************
 - (NSInteger)numberOfColumnsInGridView:(DTGridView *)gridView forRowWithIndex:(NSInteger)index;
 {
+    if ([self.photos count] % 3 != 0) 
+        return (index < [self.photos count] / 3) ? 3 : [self.photos count] %3 + 1; 
 	return 3;
 
 }
@@ -200,15 +196,6 @@
 
 - (void)gridView:(DTGridView *)gridView selectionMadeAtRow:(NSInteger)rowIndex column:(NSInteger)columnIndex;
 {
-//	Photo *aPhoto = [self.photos objectAtIndex:rowIndex * 4 + columnIndex];
-//	PhotoViewerViewController *photoViewerViewController = [[PhotoViewerViewController alloc] initWithNibName:@"PhotoViewerViewController" bundle:nil];
-//	photoViewerViewController.wantsFullScreenLayout = YES;
-//	photoViewerViewController.photo = aPhoto;
-//	[self.navigationController pushViewController:photoViewerViewController animated:YES];
-//	[photoViewerViewController release];
-
-
-    
 	NSMutableArray *mwPhotos = [[NSMutableArray alloc] init];
     for (Photo *aPhoto in self.photos) 
     {

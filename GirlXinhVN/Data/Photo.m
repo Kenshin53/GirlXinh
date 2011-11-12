@@ -43,6 +43,20 @@
     return self;
 }
 
+-(BOOL)isEqual:(id)object
+{
+    Photo *otherObject = (Photo *) object;
+    if (! [otherObject isKindOfClass:[Photo class]]) 
+        return NO;
+    
+    return [self.photoID isEqual:otherObject.photoID];
+}
+
+-(NSUInteger)hash
+{
+    return [self.photoID hash];
+}
+
 - (void)dealloc {
 	[photoID release];
 	[bigPhotoURL release];

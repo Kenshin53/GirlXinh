@@ -7,9 +7,6 @@
 //
 
 #import "LoadingViewController.h"
-#import "AsyncURLConnection.h"
-#import "NSString+Utils.h"
-#import "SBJsonParser.h"
 #import "Photo.h"
 #import "EGOImageLoader.h"
 #import "EGOCache.h"
@@ -20,7 +17,6 @@
 @synthesize progressBar;
 @synthesize coverImage;
 @synthesize delegate;
-@synthesize parsedPhotos;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,144 +37,85 @@
 
 #pragma mark - View lifecycle
 
-- (NSString *)savedPhotosFilePath
-{
-	NSArray* documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString* documentRootPath = [documentPaths objectAtIndex:0];
-	NSString *savedPhotosFilePath = [documentRootPath stringByAppendingString:@"savedPhotos.plist"];
-	return savedPhotosFilePath;
-}
-
 // TODO: Handle broken download.
-
-- (void)downloadImages; {
-	delta = (1 - kJSONDataProgress) / [parsedPhotos count];
-
-	__block  int step = [parsedPhotos count]/20;
-	__block int index = 0;
-
-	for (Photo *aPhoto in parsedPhotos)
-	{
-		[[EGOImageLoader sharedImageLoader] loadImageForURL:[NSURL URLWithString:aPhoto.bigPhotoURL]
-		                                         completion:^void(UIImage *image, NSURL *imageURL, NSError *error)
-		{
-			if (index % 4 == 0)
-			{
-				UIImageView *imageView = (UIImageView *)[self.view viewWithTag:((index /4) % 9)+1];
-				imageView.image = image;
-			}
-			index++;
-
-			if (index % step == 0)
-			{
-				progressBar.progress += 0.05;
-			}
-
-            if (index == [parsedPhotos count])
-            {
-
-                if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)]) {
-                    [delegate didFinishLoadingData:self];
-                }
-            }
-		}];
-	}
-}
-
-- (void)cleanUpSavedPhotosArray:(NSArray *)savedPhotos; {
-	NSMutableArray *arrayToDeleted = [[NSMutableArray alloc] initWithCapacity:0];
-	for(Photo *aPhoto in savedPhotos)
-	{
-
-		NSURL *aURl = [NSURL URLWithString:aPhoto.bigPhotoURL];
-		aPhoto.imageCached = [[EGOCache currentCache] hasCacheForKey:keyForURL(aURl, nil)];
-		aPhoto.thumbnailCached = [[EGOCache currentCache] hasCacheForKey:keyForURL(aURl, @"thumbnail")];
-		if ( ! aPhoto.imageCached )
-			[arrayToDeleted addObject:aPhoto];
-	}
-
-	self.parsedPhotos = savedPhotos;
-	[parsedPhotos removeObjectsInArray:arrayToDeleted];
-}
-
-- (void)dismissViewControllerWithSavedPhotos:(NSArray *)savedPhotos
-{
-	[self cleanUpSavedPhotosArray:savedPhotos];
-	NSString *savedPhotosFilePath = [self savedPhotosFilePath];
-	[NSKeyedArchiver archiveRootObject:parsedPhotos toFile:savedPhotosFilePath];
-	if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)])
-        [delegate didFinishLoadingData:self];
-}
-
-- (void)parseResult:(NSData *)data
-{
-	NSArray *savedPhotos = [NSKeyedUnarchiver unarchiveObjectWithFile:[self savedPhotosFilePath]];
-
-	SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
-	NSDictionary *result = [jsonParser objectWithData:data];
-	NSArray *photos  = [result objectForKey:@"data"];
-	[jsonParser release];
-
-	if ([photos count] == [savedPhotos count])
-	{
-		progressBar.progress = 1.0;
-		[self dismissViewControllerWithSavedPhotos:savedPhotos];
-		return;
-	}
-
-	parsedPhotos = [[NSMutableArray alloc] initWithCapacity:[photos count]];
-	NSInteger count =0;
-	for(NSDictionary *aPhotoDict in photos)
-	{
-		Photo *aPhoto = [[Photo alloc] init];
-		aPhoto.photoID = [aPhotoDict objectForKey:@"pid"];
-		aPhoto.bigPhotoURL = [aPhotoDict objectForKey:@"src_big"];
-		[parsedPhotos addObject:aPhoto];
-		[aPhoto release];
-	}
-
-	[self downloadImages];
-
-	NSString *savedPhotosFilePath = [self savedPhotosFilePath];
-	[NSKeyedArchiver archiveRootObject:parsedPhotos toFile:savedPhotosFilePath];
-
-	NSLog(@"Number of empty photo: %d", count);
-	NSLog(@"Done");
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-	NSString *requestURL = [NSString stringByEscapingString:@"https://graph.facebook.com/fql?q=select caption, src_big from photo where aid ='108425012571651_29383'"];
-	NSString *queryString = @"https://graph.facebook.com/fql?q=select pid, src_big from photo where aid =\"108425012571651_29383\" order by created desc";
-
-	[AsyncURLConnection request:[queryString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] completeBlock:^void(NSData *data) {
-		NSLog(@"Finished loading.");
-		progressBar.progress = kJSONDataProgress;
-		[self parseResult:data];
-	} errorBlock:^void(NSError *error) {
-		NSArray *savedPhotos = [NSKeyedUnarchiver unarchiveObjectWithFile:[self savedPhotosFilePath]];
-		if (savedPhotos && [savedPhotos count])
-		{
-			progressBar.progress = 1.0;
-			self.parsedPhotos = savedPhotos;
-			if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)])
-			{
-                [self performSelector:@selector(dismissViewControllerWithSavedPhotos:) withObject:savedPhotos afterDelay:0.5];
-//				[self.view removeFromSuperview];
-			}
-			return;
-		}
-		else
-		{
-			UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Cannot download images. Please check your internet connection" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-			[alertView show];
-		}
-	}];
-
-
+	numberOfDownloadedImage = 0;
+	photoParser = [[PhotoParser alloc] init];
+	photoParser.delegate = self;
+	[photoParser parseFacebookPhoto];
 }
+
+- (void)updateUI
+{
+	if (index < [downloadedPhotos count])
+	{
+		UIImageView *imageView = (UIImageView *)[self.view viewWithTag:(index % 9) + 1];
+		NSURL *aURL = [NSURL URLWithString:[[downloadedPhotos objectAtIndex:index] bigPhotoURL]];
+		UIImage *thumbnailImage = [[EGOCache currentCache] imageForKey:keyForURL(aURL, @"thumbnail")];
+		imageView.image = thumbnailImage;
+		progressBar.progress = (float) numberOfDownloadedImage / totalImageToDownload;
+		index ++;
+	}
+}
+
+- (void)didFinishParsingPhotos:(NSArray *)parsedPhotos
+{
+	NSSet *downloadedPhotosSet = [NSSet setWithArray:[PhotoParser downloadedPhotos]];
+	NSMutableSet *photosToDownloadSet =[NSMutableSet setWithArray:parsedPhotos];
+	[photosToDownloadSet minusSet:downloadedPhotosSet];
+
+	NSArray *photosToDownload = [photosToDownloadSet allObjects];
+	
+	totalImageToDownload = [photosToDownload count];
+	if ( totalImageToDownload == 0)
+	{
+        if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)])
+        {
+            
+            [delegate didFinishLoadingData:self];
+        }
+		return;
+	}
+
+	downloadedPhotos = [[NSMutableArray alloc] initWithCapacity:0];
+	updateTimer = [NSTimer scheduledTimerWithTimeInterval:0.2
+	                                               target:self
+	                                             selector:@selector(updateUI)
+			                                     userInfo:nil
+					                              repeats:YES];
+
+	for (Photo *aPhoto in photosToDownload)
+    {
+        [[EGOImageLoader sharedImageLoader] loadImageForURL:[NSURL URLWithString:aPhoto.bigPhotoURL]
+                                                 completion:^void(UIImage *image, NSURL *imageURL, NSError *error)
+         {
+	         numberOfDownloadedImage++;
+	         [downloadedPhotos addObject:aPhoto];
+	         if ([downloadedPhotos count] == [photosToDownload count])
+	         {
+		         if (delegate && [delegate respondsToSelector:@selector(didFinishLoadingData:)])
+		         {
+			         [downloadedPhotos release];
+                     [updateTimer invalidate];
+                     updateTimer = nil;
+			         [delegate didFinishLoadingData:self];
+		         }
+	         }
+         }];
+    }
+}
+
+- (void)didFailParsingPhotos:(NSError *)error
+{
+    if (delegate && [delegate respondsToSelector:@selector(didFailLoadingData:)])
+    {
+        [delegate didFailLoadingData:self];
+    }
+}
+
 
 - (void)viewDidUnload
 {
@@ -197,7 +134,8 @@
 }
 
 - (void)dealloc {
-    [parsedPhotos release];
+
+    [photoParser release];
     [loadingLabel release];
     [progressBar release];
     [coverImage release];

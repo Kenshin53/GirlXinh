@@ -8,10 +8,12 @@
 
 #import "DTGridView.h"
 #import "LoadingViewController.h"
+
 @interface PhotoGridViewControllers : UIViewController  <DTGridViewDelegate, DTGridViewDataSource, LoadingViewDelegate>
 {
     LoadingViewController *loadingViewController;
     NSMutableArray *photos;
+    
 }
 @property (retain, nonatomic) NSMutableArray *photos;
 @property (retain, nonatomic) IBOutlet DTGridView *gridView;
